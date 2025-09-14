@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Al-Khwarizmi: The Pioneer of AI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .slide {
+            display: none;
+            transition: opacity 0.5s ease-in-out;
+        }
+        .slide.active {
+            display: block;
+        }
+        .fade-in {
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body class="bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 flex items-center justify-center min-h-screen p-4">
+
+    <div id="presentation-container" class="w-full max-w-4xl bg-white dark:bg-gray-800 rounded-2xl shadow-2xl overflow-hidden">
+        <!-- Presentation Slides -->
+        <div id="slides" class="relative">
+            <!-- Slide 1: Title -->
+            <div id="slide-1" class="slide active p-8 md:p-12 fade-in">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <h1 class="text-4xl md:text-5xl font-bold text-indigo-600 dark:text-indigo-400 mb-4">Al-Khwarizmi</h1>
+                        <p class="text-xl md:text-2xl text-gray-600 dark:text-gray-300">The Father of Algebra & Grandfather of AI</p>
+                        <p class="mt-6 text-base">This presentation explores the life and monumental contributions of Muhammad ibn Musa al-Khwarizmi, whose work in the 9th century laid the very foundation for modern computing and artificial intelligence.</p>
+                    </div>
+                    <div class="flex justify-center">
+                        <img src="https://placehold.co/400x400/7c3aed/ffffff?text=Al-Khwarizmi" alt="Statue of Al-Khwarizmi" class="rounded-lg shadow-lg object-cover w-64 h-64 md:w-80 md:h-80">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 2: Early Life -->
+            <div id="slide-2" class="slide p-8 md:p-12">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div class="flex justify-center order-last md:order-first">
+                         <img src="https://placehold.co/400x400/34d399/ffffff?text=House+of+Wisdom" alt="Artistic representation of the House of Wisdom" class="rounded-lg shadow-lg object-cover w-64 h-64 md:w-80 md:h-80">
+                    </div>
+                    <div>
+                        <h2 class="text-3xl font-bold text-emerald-600 dark:text-emerald-400 mb-4">Early Life & The House of Wisdom</h2>
+                        <ul class="space-y-3 text-base list-disc list-inside">
+                            <li>Born around 780 CE in Khwarizm (modern-day Uzbekistan).</li>
+                            <li>Became a distinguished scholar at the legendary <span class="font-semibold">House of Wisdom</span> in Baghdad.</li>
+                            <li>This intellectual center housed knowledge from across the world, giving him access to Greek and Indian scientific manuscripts.</li>
+                            <li>His work focused on synthesizing and expanding upon this vast collection of knowledge.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 3: Algebra -->
+            <div id="slide-3" class="slide p-8 md:p-12">
+                 <h2 class="text-3xl font-bold text-sky-600 dark:text-sky-400 mb-6 text-center">The Birth of Algebra</h2>
+                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <p class="mb-4">His most famous work was <span class="font-semibold">"The Compendious Book on Calculation by Completion and Balancing."</span></p>
+                        <ul class="space-y-3 list-disc list-inside">
+                            <li>From its title, "Al-Jabr," we get the word <span class="font-semibold">Algebra</span>.</li>
+                            <li>It provided the first systematic, step-by-step methods for solving linear and quadratic equations.</li>
+                            <li>This was a revolutionary shift towards creating generalized procedures to solve entire classes of problems.</li>
+                        </ul>
+                    </div>
+                    <div class="flex justify-center">
+                        <img src="https://placehold.co/400x300/0ea5e9/ffffff?text=Algebra+Manuscript" alt="A page from Al-Khwarizmi's manuscript on Algebra" class="rounded-lg shadow-lg object-cover">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Slide 4: Algorithms & Numerals -->
+            <div id="slide-4" class="slide p-8 md:p-12">
+                <h2 class="text-3xl font-bold text-amber-600 dark:text-amber-400 mb-6 text-center">Algorithms & Arabic Numerals</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                     <div class="flex justify-center">
+                        <img src="https://placehold.co/400x300/f59e0b/ffffff?text=Hindu-Arabic+Numerals" alt="The Hindu-Arabic numeral system" class="rounded-lg shadow-lg object-cover">
+                    </div>
+                    <div>
+                        <p class="mb-4">Al-Khwarizmi's name gave rise to a word that is central to all of computing.</p>
+                        <ul class="space-y-3 list-disc list-inside">
+                           <li>The Latinized version of his name, "Algoritmi," is the origin of the word <span class="font-semibold">Algorithm</span>.</li>
+                           <li>An algorithm is a specific, step-by-step procedure for solving a problem or performing a computation.</li>
+                           <li>He was also crucial in popularizing the Hindu-Arabic numeral system (0-9) in the Middle East and Europe, which is the foundation of digital systems.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 5: Influence on AI -->
+            <div id="slide-5" class="slide p-8 md:p-12">
+                <h2 class="text-3xl font-bold text-rose-600 dark:text-rose-400 mb-6 text-center">Influence on Modern AI</h2>
+                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div>
+                         <p class="mb-4">His methodical approach to problem-solving is the very essence of Artificial Intelligence.</p>
+                        <ul class="space-y-3 list-disc list-inside">
+                           <li><span class="font-semibold">Algorithmic Foundation:</span> Every AI system, from search engines to machine learning models, is powered by complex algorithms.</li>
+                           <li><span class="font-semibold">Systematic Logic:</span> AI relies on the same principles of logical, step-by-step procedures that Al-Khwarizmi formalized nearly 1200 years ago.</li>
+                           <li><span class="font-semibold">Problem Abstraction:</span> His method of creating general solutions for types of problems is mirrored in how AI models are trained to handle a wide range of tasks within a domain.</li>
+                        </ul>
+                    </div>
+                     <div class="flex justify-center">
+                        <img src="https://placehold.co/400x300/e11d48/ffffff?text=Modern+AI" alt="Abstract graphic representing artificial intelligence" class="rounded-lg shadow-lg object-cover">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 6: Resources -->
+            <div id="slide-6" class="slide p-8 md:p-12 text-center">
+                <h2 class="text-3xl font-bold text-violet-600 dark:text-violet-400 mb-4">Learn More</h2>
+                <p class="text-lg mb-8">Explore these resources to dive deeper into the world of Al-Khwarizmi and his lasting legacy.</p>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <a href="https://www.youtube.com/watch?v=vKLnuWCxBVo" target="_blank" class="bg-red-500 hover:bg-red-600 text-white font-bold py-3 px-6 rounded-lg transition-transform transform hover:scale-105 shadow-lg">
+                        Watch: Documentary Film
+                    </a>
+                    <a href="https://mathshistory.st-andrews.ac.uk/Biographies/Al-Khwarizmi/" target="_blank" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-lg transition-transform transform hover:scale-105 shadow-lg">
+                        Read: In-Depth Biography
+                    </a>
+                     <a href="https://davidson.weizmann.ac.il/en/online/sciencehistory/genius-who-invented-algebra-and-algorithm" target="_blank" class="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-lg transition-transform transform hover:scale-105 shadow-lg">
+                        Explore: The Genius of Algebra
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <div class="bg-gray-200 dark:bg-gray-700 p-4 flex justify-between items-center">
+            <button id="prev-btn" class="bg-gray-500 text-white font-bold py-2 px-4 rounded-lg hover:bg-gray-600 disabled:opacity-50 disabled:cursor-not-allowed transition">
+                Previous
+            </button>
+            <div id="slide-indicator" class="text-sm text-gray-700 dark:text-gray-300">
+                Slide 1 / 6
+            </div>
+            <button id="next-btn" class="bg-indigo-600 text-white font-bold py-2 px-4 rounded-lg hover:bg-indigo-700 transition">
+                Next
+            </button>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const slides = document.querySelectorAll('.slide');
+            const prevBtn = document.getElementById('prev-btn');
+            const nextBtn = document.getElementById('next-btn');
+            const slideIndicator = document.getElementById('slide-indicator');
+            let currentSlide = 0;
+            const totalSlides = slides.length;
+
+            function showSlide(index) {
+                // Hide all slides
+                slides.forEach(slide => {
+                    slide.classList.remove('active', 'fade-in');
+                });
+                
+                // Show the target slide with animation
+                const activeSlide = slides[index];
+                if(activeSlide) {
+                    activeSlide.classList.add('active');
+                    // We re-add the fade-in class to trigger the animation
+                    setTimeout(() => activeSlide.classList.add('fade-in'), 10);
+                }
+                
+                // Update indicator
+                slideIndicator.textContent = `Slide ${index + 1} / ${totalSlides}`;
+
+                // Update button states
+                prevBtn.disabled = index === 0;
+                nextBtn.disabled = index === totalSlides - 1;
+            }
+
+            nextBtn.addEventListener('click', () => {
+                if (currentSlide < totalSlides - 1) {
+                    currentSlide++;
+                    showSlide(currentSlide);
+                }
+            });
+
+            prevBtn.addEventListener('click', () => {
+                if (currentSlide > 0) {
+                    currentSlide--;
+                    showSlide(currentSlide);
+                }
+            });
+
+            // Initial setup
+            showSlide(currentSlide);
+        });
+    </script>
+</body>
+</html>
