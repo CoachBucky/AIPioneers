@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joseph Weizenbaum: Pioneer, Critic, and Conscience of AI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f2f5;
+        }
+        .slide {
+            display: none;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+        .slide.active {
+            display: block;
+            opacity: 1;
+        }
+        .slide-content {
+            animation: fadeIn 0.8s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .btn {
+            @apply inline-block px-6 py-3 text-sm font-semibold text-white bg-blue-600 rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-transform transform hover:scale-105;
+        }
+        .btn-secondary {
+            @apply inline-block px-5 py-2 text-sm font-semibold text-gray-700 bg-gray-200 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 transition-transform transform hover:scale-105;
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center min-h-screen p-4">
+
+    <div id="presentation-container" class="w-full max-w-4xl mx-auto bg-white rounded-2xl shadow-2xl overflow-hidden">
+        
+        <!-- Slide 1: Title -->
+        <div id="slide-1" class="slide active">
+            <div class="p-8 md:p-12 slide-content text-center flex flex-col items-center justify-center h-[80vh] md:h-[70vh]">
+                <img src="https://placehold.co/150x150/E2E8F0/4A5568?text=J.W." alt="Joseph Weizenbaum" class="rounded-full mb-6 border-4 border-gray-200 shadow-lg">
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-2">Joseph Weizenbaum</h1>
+                <p class="text-xl md:text-2xl text-gray-600 mb-8">Pioneer, Critic, and Conscience of AI</p>
+                <button onclick="changeSlide(2)" class="btn text-lg">Start Presentation</button>
+            </div>
+        </div>
+
+        <!-- Slide 2: Early Life -->
+        <div id="slide-2" class="slide">
+            <div class="p-8 md:p-12 slide-content">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6">Early Life: A Journey for Freedom</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <p class="text-gray-700 mb-4 text-base leading-relaxed">Joseph Weizenbaum was born in 1923 in Berlin, Germany, to Jewish parents. His family fled the rising threat of Nazism in 1936, immigrating to the United States.</p>
+                        <p class="text-gray-700 mb-4 text-base leading-relaxed">He began studying mathematics at Wayne State University in Detroit. His education was paused for his service in the U.S. Army Air Corps during WWII. After the war, he returned to complete his B.S. and M.S. in Mathematics.</p>
+                        <div class="mt-8 space-x-4">
+                            <a href="https://en.wikipedia.org/wiki/Joseph_Weizenbaum" target="_blank" class="btn">Full Biography</a>
+                            <a href="https://www.ushmm.org/antisemitism/holocaust-denial-and-distortion/nazi-racism-and-antisemitism" target="_blank" class="btn-secondary">History of the Era</a>
+                        </div>
+                    </div>
+                    <img src="https://placehold.co/600x400/BFDBFE/1E3A8A?text=Berlin+to+Detroit" alt="Historical photo montage" class="rounded-lg shadow-lg object-cover w-full h-full">
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 3: ELIZA -->
+        <div id="slide-3" class="slide">
+            <div class="p-8 md:p-12 slide-content">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6">ELIZA: The Birth of the Chatbot</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <img src="https://placehold.co/600x400/C7D2FE/312E81?text=ELIZA+Interface" alt="ELIZA program interface" class="rounded-lg shadow-lg object-cover w-full h-full">
+                    <div>
+                        <p class="text-gray-700 mb-4 text-base leading-relaxed">At MIT in the mid-1960s, Weizenbaum created **ELIZA**, one of the first programs capable of processing natural language. It was designed to simulate a Rogerian psychotherapist, reflecting a user's statements back to them as questions.</p>
+                        <p class="text-gray-700 mb-4 text-base leading-relaxed">ELIZA operated on simple keyword matching and substitution rules. Weizenbaum intended it as a demonstration of the superficiality of human-computer communication.</p>
+                        <div class="mt-8 space-x-4">
+                            <a href="https://www.masswerk.at/elizabot/" target="_blank" class="btn">Try ELIZA</a>
+                            <a href="https://www.youtube.com/watch?v=RMK9AphfLco" target="_blank" class="btn-secondary">Watch an Explanation</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 4: The ELIZA Effect -->
+        <div id="slide-4" class="slide">
+            <div class="p-8 md:p-12 slide-content">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6">The "ELIZA Effect": An Unexpected Reaction</h2>
+                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <p class="text-gray-700 mb-4 text-base leading-relaxed">Weizenbaum was horrified to see how quickly people formed emotional attachments to ELIZA. Users, including his own secretary, would share deep personal thoughts and act as if the program truly understood them.</p>
+                        <p class="text-gray-700 mb-4 text-base leading-relaxed">This phenomenon became known as the **"ELIZA effect"**: the human tendency to unconsciously anthropomorphize computer behavior. It sparked Weizenbaum's lifelong concern about the ethical implications of AI and its potential to deceive.</p>
+                        <div class="mt-8 space-x-4">
+                            <a href="https://en.wikipedia.org/wiki/ELIZA_effect" target="_blank" class="btn">Learn More</a>
+                        </div>
+                    </div>
+                    <img src="https://placehold.co/600x400/DDD6FE/4C1D95?text=Human-AI+Connection" alt="Abstract human-AI connection" class="rounded-lg shadow-lg object-cover w-full h-full">
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 5: The Critic -->
+        <div id="slide-5" class="slide">
+             <div class="p-8 md:p-12 slide-content">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6">The Critic: "Computer Power and Human Reason"</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <img src="https://placehold.co/600x400/E0E7FF/3730A3?text=Book+Cover" alt="Computer Power and Human Reason book cover" class="rounded-lg shadow-lg object-cover w-full h-full">
+                    <div>
+                        <p class="text-gray-700 mb-4 text-base leading-relaxed">In 1976, Weizenbaum published his seminal book, transitioning from AI pioneer to its most prominent critic. He argued that there are domains where computers should never be trusted, especially those requiring uniquely human qualities.</p>
+                        <blockquote class="border-l-4 border-blue-500 pl-4 py-2 my-4 bg-blue-50">
+                            <p class="text-gray-700 italic">"The distinction must be made between judgment and calculation... a computer can make calculations, but it cannot make judgments."</p>
+                        </blockquote>
+                        <div class="mt-8 space-x-4">
+                             <a href="https://mitpress.mit.edu/9780262730472/computer-power-and-human-reason/" target="_blank" class="btn">About the Book</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 6: Legacy -->
+        <div id="slide-6" class="slide">
+            <div class="p-8 md:p-12 slide-content text-center">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6">An Enduring Legacy in a Modern World</h2>
+                <img src="https://placehold.co/600x300/E5E7EB/1F2937?text=Modern+AI+Ethics" alt="Modern AI and ethics symbols" class="rounded-lg shadow-lg object-cover w-full h-auto mx-auto mb-6">
+                <p class="text-gray-700 mb-4 max-w-2xl mx-auto">Weizenbaum's work is the direct ancestor of today's chatbots and virtual assistants. More importantly, his ethical warnings are more relevant than ever.</p>
+                <p class="text-gray-700 mb-8 max-w-2xl mx-auto">Debates on AI bias, the replacement of human jobs, and the nature of machine "understanding" all echo the fundamental questions he first raised over 50 years ago.</p>
+                <button onclick="changeSlide(1)" class="btn-secondary">Restart Presentation</button>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <div class="bg-gray-100 p-4 flex justify-between items-center border-t border-gray-200">
+            <button id="prevBtn" onclick="navigate(-1)" class="btn-secondary">&larr; Previous</button>
+            <div id="slide-counter" class="text-sm text-gray-600"></div>
+            <button id="nextBtn" onclick="navigate(1)" class="btn-secondary">Next &rarr;</button>
+        </div>
+    </div>
+
+    <script>
+        let currentSlide = 1;
+        const totalSlides = document.querySelectorAll('.slide').length;
+
+        // Function to show a specific slide
+        function showSlide(slideNumber) {
+            document.querySelectorAll('.slide').forEach((slide, index) => {
+                if (index + 1 === slideNumber) {
+                    slide.classList.add('active');
+                } else {
+                    slide.classList.remove('active');
+                }
+            });
+            updateNavigation();
+        }
+        
+        // Function to change to a specific slide (used by Start button)
+        function changeSlide(slideNumber) {
+            currentSlide = slideNumber;
+            showSlide(currentSlide);
+        }
+
+        // Function to navigate to the next or previous slide
+        function navigate(direction) {
+            currentSlide += direction;
+            if (currentSlide > totalSlides) {
+                currentSlide = 1;
+            }
+            if (currentSlide < 1) {
+                currentSlide = totalSlides;
+            }
+            showSlide(currentSlide);
+        }
+
+        // Function to update the navigation buttons and counter
+        function updateNavigation() {
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+            const slideCounter = document.getElementById('slide-counter');
+            const navContainer = prevBtn.parentElement;
+
+            if (currentSlide === 1) {
+                navContainer.classList.add('hidden');
+            } else {
+                 navContainer.classList.remove('hidden');
+            }
+            
+            if (currentSlide > 1) {
+                prevBtn.style.visibility = 'visible';
+            } else {
+                prevBtn.style.visibility = 'hidden';
+            }
+            
+            if (currentSlide === totalSlides) {
+                nextBtn.style.visibility = 'hidden';
+            } else {
+                 nextBtn.style.visibility = 'visible';
+            }
+            
+            // Do not show navigation on the first slide
+             if (currentSlide === 1) {
+                prevBtn.parentElement.style.display = 'none';
+            } else {
+                prevBtn.parentElement.style.display = 'flex';
+            }
+
+            slideCounter.textContent = `Slide ${currentSlide} of ${totalSlides}`;
+        }
+
+        // Initialize the presentation
+        document.addEventListener('DOMContentLoaded', () => {
+            showSlide(currentSlide);
+        });
+    </script>
+</body>
+</html>
