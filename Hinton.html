@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geoffrey Hinton: The Architect of Modern AI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Simple transition for slides */
+        .slide {
+            transition: opacity 0.5s ease-in-out;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen p-4">
+
+    <div class="w-full max-w-4xl mx-auto">
+        <!-- Slide Container -->
+        <div id="presentation-container" class="relative bg-white rounded-xl shadow-2xl overflow-hidden" style="aspect-ratio: 16/9;">
+            <!-- Slides will be inserted here by JS -->
+        </div>
+
+        <!-- Navigation Controls -->
+        <div class="mt-6 flex justify-between items-center px-2">
+            <button id="prevBtn" class="bg-gray-800 text-white rounded-full p-3 hover:bg-gray-600 transition disabled:opacity-50 disabled:cursor-not-allowed flex items-center shadow-lg">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                </svg>
+                <span class="mr-2">Previous</span>
+            </button>
+            <div id="slide-counter" class="text-gray-600 font-medium"></div>
+            <button id="nextBtn" class="bg-gray-800 text-white rounded-full p-3 hover:bg-gray-600 transition disabled:opacity-50 disabled:cursor-not-allowed flex items-center shadow-lg">
+                <span class="ml-2">Next</span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <script>
+        // --- SLIDE DATA ---
+        const slidesData = [
+            // Slide 1: Title
+            {
+                content: `
+                    <div class="flex flex-col justify-center items-center h-full text-center bg-gray-900 text-white p-8">
+                        <img src="https://images.thestar.com/dD0slY7jWp-892CR24dC_NC1xDQ=/1200x992/smart/filters:cb(1683057390595)/https://www.thestar.com/content/dam/thestar/business/2023/05/02/the-godfather-of-ai-geoffrey-hinton-reportedly-quits-google-to-warn-of-the-industrys-dangers/geoffrey_hinton.jpg" alt="Geoffrey Hinton" class="w-32 h-32 rounded-full object-cover mb-6 border-4 border-cyan-400 shadow-lg">
+                        <h1 class="text-4xl md:text-6xl font-bold text-white tracking-tight">Geoffrey Hinton</h1>
+                        <h2 class="mt-4 text-2xl md:text-3xl text-cyan-300">The Architect of Modern AI</h2>
+                    </div>
+                `
+            },
+            // Slide 2: Introduction
+            {
+                content: `
+                    <div class="p-8 md:p-12 h-full flex flex-col md:flex-row items-center gap-8">
+                        <div class="w-full md:w-1/2">
+                            <h2 class="text-3xl font-bold text-gray-800 mb-4">Who is Geoffrey Hinton?</h2>
+                            <ul class="space-y-3 text-lg text-gray-700 list-disc list-inside">
+                                <li>A British-Canadian cognitive psychologist and computer scientist.</li>
+                                <li>Widely known as the <strong>"Godfather of AI"</strong> for his foundational work on artificial neural networks.</li>
+                                <li>Awarded the 2018 Turing Award, the "Nobel Prize of Computing," alongside Yoshua Bengio and Yann LeCun.</li>
+                            </ul>
+                        </div>
+                        <div class="w-full md:w-1/2">
+                            <img src="https://placehold.co/600x400/0E7490/FFFFFF?text=Neural+Network+Concept" alt="Neural Network Concept" class="rounded-lg shadow-md">
+                        </div>
+                    </div>
+                `
+            },
+            // Slide 3: Early Life & Education
+            {
+                 content: `
+                    <div class="p-8 md:p-12 h-full flex flex-col md:flex-row-reverse items-center gap-8">
+                        <div class="w-full md:w-1/2">
+                            <h2 class="text-3xl font-bold text-gray-800 mb-4">Early Life & Educational Roots</h2>
+                            <ul class="space-y-3 text-lg text-gray-700 list-disc list-inside">
+                                <li><strong>Family of Scientists:</strong> Descendant of logician George Boole and surveyor Sir George Everest.</li>
+                                <li><strong>Cambridge University:</strong> BA in Experimental Psychology (1970). This psychological background deeply influenced his theories on machine learning.</li>
+                                <li><strong>University of Edinburgh:</strong> PhD in Artificial Intelligence (1978).</li>
+                            </ul>
+                        </div>
+                        <div class="w-full md:w-1/2">
+                           <img src="https://placehold.co/600x400/111827/FFFFFF?text=University+of+Cambridge" alt="University of Cambridge" class="rounded-lg shadow-md">
+                        </div>
+                    </div>
+                `
+            },
+            // Slide 4: Backpropagation
+            {
+                content: `
+                    <div class="p-8 md:p-12 h-full">
+                        <h2 class="text-3xl font-bold text-gray-800 mb-2">Major Contribution: Backpropagation</h2>
+                        <p class="text-lg text-gray-600 mb-6">The algorithm that allows neural networks to learn.</p>
+                        <div class="flex flex-col md:flex-row items-center gap-8">
+                            <div class="w-full md:w-1/2">
+                                <img src="https://placehold.co/600x400/4F46E5/FFFFFF?text=Backpropagation+Diagram" alt="Backpropagation Diagram" class="rounded-lg shadow-md">
+                            </div>
+                            <div class="w-full md:w-1/2">
+                                <p class="text-lg text-gray-700 mb-6">In 1986, Hinton co-authored a paper that popularized the backpropagation algorithm. It works by calculating the "error" in a network's output and propagating this error backward through the layers to adjust the connections (weights).</p>
+                                <div class="space-y-3">
+                                    <a href="#" class="inline-block bg-indigo-600 text-white font-semibold py-2 px-4 rounded-lg hover:bg-indigo-700 transition w-full text-center">Watch: How Backpropagation Works (Video)</a>
+                                    <a href="#" class="inline-block bg-gray-200 text-gray-800 font-semibold py-2 px-4 rounded-lg hover:bg-gray-300 transition w-full text-center">Read the 1986 Paper (Link)</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `
+            },
+            // Slide 5: Boltzmann Machines
+            {
+                content: `
+                    <div class="p-8 md:p-12 h-full">
+                        <h2 class="text-3xl font-bold text-gray-800 mb-2">Major Contribution: Boltzmann Machines</h2>
+                        <p class="text-lg text-gray-600 mb-6">A pioneering step in unsupervised learning.</p>
+                        <div class="flex flex-col md:flex-row-reverse items-center gap-8">
+                            <div class="w-full md:w-1/2">
+                               <img src="https://placehold.co/600x400/BE123C/FFFFFF?text=Boltzmann+Machine+Model" alt="Boltzmann Machine Model" class="rounded-lg shadow-md">
+                            </div>
+                            <div class="w-full md:w-1/2">
+                                <p class="text-lg text-gray-700 mb-6">In 1985, Hinton co-invented Boltzmann machines. These networks, inspired by statistical physics, can learn about data without labeled examples. This was a crucial development for generative models that can create new data similar to what they were trained on.</p>
+                                <div class="space-y-3">
+                                    <a href="#" class="inline-block bg-rose-700 text-white font-semibold py-2 px-4 rounded-lg hover:bg-rose-800 transition w-full text-center">Explore an Illustration (Link)</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `
+            },
+            // Slide 6: Deep Learning
+            {
+                content: `
+                    <div class="p-8 md:p-12 h-full">
+                        <h2 class="text-3xl font-bold text-gray-800 mb-2">Pioneering Deep Learning</h2>
+                        <p class="text-lg text-gray-600 mb-6">Sparking the AI revolution.</p>
+                        <div class="flex flex-col md:flex-row items-center gap-8">
+                            <div class="w-full md:w-1/2">
+                                <img src="https://placehold.co/600x400/047857/FFFFFF?text=AlexNet+Architecture" alt="AlexNet Architecture" class="rounded-lg shadow-md">
+                            </div>
+                            <div class="w-full md:w-1/2">
+                                <p class="text-lg text-gray-700 mb-6">In 2012, Hinton and his students created "AlexNet," a deep neural network that won the ImageNet competition by a landslide. This victory proved the power of deep learning on a massive scale and is considered a pivotal moment in AI history.</p>
+                                <div class="space-y-3">
+                                    <a href="#" class="inline-block bg-emerald-600 text-white font-semibold py-2 px-4 rounded-lg hover:bg-emerald-700 transition w-full text-center">About the ImageNet Challenge (Article)</a>
+                                    <a href="#" class="inline-block bg-gray-200 text-gray-800 font-semibold py-2 px-4 rounded-lg hover:bg-gray-300 transition w-full text-center">Watch a Video Explainer (Link)</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `
+            },
+            // Slide 7: Influence on Modern AI
+            {
+                content: `
+                    <div class="p-8 md:p-12 h-full">
+                        <h2 class="text-3xl font-bold text-gray-800 mb-4 text-center">Influence on Modern-Day AI</h2>
+                        <div class="grid grid-cols-2 grid-rows-2 gap-4 h-5/6 text-center">
+                            <div class="bg-blue-100 rounded-lg p-4 flex flex-col justify-center items-center">
+                                <h3 class="font-bold text-xl text-blue-800">Image Recognition</h3>
+                                <p class="text-blue-700">Facial recognition, self-driving cars</p>
+                            </div>
+                            <div class="bg-green-100 rounded-lg p-4 flex flex-col justify-center items-center">
+                                <h3 class="font-bold text-xl text-green-800">Natural Language</h3>
+                                <p class="text-green-700">ChatGPT, Google Translate</p>
+                            </div>
+                            <div class="bg-purple-100 rounded-lg p-4 flex flex-col justify-center items-center">
+                                <h3 class="font-bold text-xl text-purple-800">Speech Recognition</h3>
+                                <p class="text-purple-700">Siri, Alexa, voice assistants</p>
+                            </div>
+                            <div class="bg-yellow-100 rounded-lg p-4 flex flex-col justify-center items-center">
+                                <h3 class="font-bold text-xl text-yellow-800">Recommender Systems</h3>
+                                <p class="text-yellow-700">Netflix, Spotify, Amazon</p>
+                            </div>
+                        </div>
+                    </div>
+                `
+            },
+            // Slide 8: Legacy & Future
+            {
+                content: `
+                    <div class="p-8 md:p-12 h-full flex flex-col md:flex-row items-center gap-8">
+                        <div class="w-full md:w-1/2">
+                            <h2 class="text-3xl font-bold text-gray-800 mb-4">Legacy & Future Outlook</h2>
+                            <p class="text-lg text-gray-700 mb-6">Hinton's work transformed AI from a niche field to a world-changing technology. Recently, he has also become a leading voice urging caution and research into AI safety and the potential risks of superintelligence.</p>
+                             <div class="space-y-3">
+                                <a href="#" class="inline-block bg-gray-800 text-white font-semibold py-2 px-4 rounded-lg hover:bg-gray-900 transition w-full text-center">Watch Recent Hinton Interview (Video)</a>
+                                <a href="#" class="inline-block bg-gray-200 text-gray-800 font-semibold py-2 px-4 rounded-lg hover:bg-gray-300 transition w-full text-center">Read About AI Safety Concerns (Article)</a>
+                            </div>
+                        </div>
+                        <div class="w-full md:w-1/2">
+                           <img src="https://placehold.co/600x400/374151/FFFFFF?text=AI+and+Humanity" alt="AI and Humanity" class="rounded-lg shadow-md">
+                        </div>
+                    </div>
+                `
+            },
+            // Slide 9: Q&A
+            {
+                content: `
+                    <div class="flex flex-col justify-center items-center h-full text-center bg-gray-900 text-white p-12">
+                        <h1 class="text-6xl font-bold">Thank You</h1>
+                        <h2 class="mt-4 text-3xl text-gray-300">Questions & Discussion</h2>
+                    </div>
+                `
+            }
+        ];
+
+        // --- PRESENTATION LOGIC ---
+        document.addEventListener('DOMContentLoaded', () => {
+            const container = document.getElementById('presentation-container');
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+            const slideCounter = document.getElementById('slide-counter');
+
+            let currentSlide = 0;
+
+            // Create slide elements from data
+            const slides = slidesData.map((slideData, index) => {
+                const slideEl = document.createElement('div');
+                slideEl.className = 'slide absolute top-0 left-0 w-full h-full';
+                if (index !== 0) {
+                    slideEl.classList.add('opacity-0', 'pointer-events-none');
+                }
+                slideEl.innerHTML = slideData.content;
+                container.appendChild(slideEl);
+                return slideEl;
+            });
+
+            const totalSlides = slides.length;
+
+            function updateView() {
+                // Update slides visibility
+                slides.forEach((slide, index) => {
+                    if (index === currentSlide) {
+                        slide.classList.remove('opacity-0', 'pointer-events-none');
+                    } else {
+                        slide.classList.add('opacity-0', 'pointer-events-none');
+                    }
+                });
+
+                // Update counter
+                slideCounter.textContent = `${currentSlide + 1} / ${totalSlides}`;
+
+                // Update buttons
+                prevBtn.disabled = currentSlide === 0;
+                nextBtn.disabled = currentSlide === totalSlides - 1;
+            }
+            
+            // Event Listeners
+            nextBtn.addEventListener('click', () => {
+                if (currentSlide < totalSlides - 1) {
+                    currentSlide++;
+                    updateView();
+                }
+            });
+
+            prevBtn.addEventListener('click', () => {
+                if (currentSlide > 0) {
+                    currentSlide--;
+                    updateView();
+                }
+            });
+
+            // Initial view
+            updateView();
+        });
+
+    </script>
+</body>
+</html>
