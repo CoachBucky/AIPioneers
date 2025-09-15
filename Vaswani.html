@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ashish Vaswani: Architect of Modern AI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #111827; /* Dark background */
+            color: #F9FAFB;
+        }
+        .slide {
+            display: none;
+            min-height: 80vh; /* Ensure slide takes up most of the viewport height */
+        }
+        .slide.active {
+            display: flex;
+        }
+        .slide-content {
+            animation: fadeIn 0.8s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .nav-button {
+            transition: all 0.3s ease;
+        }
+        .nav-button:hover {
+            transform: scale(1.05);
+        }
+        .resource-button {
+            transition: all 0.3s ease;
+            background-color: #374151;
+            border: 1px solid #4B5563;
+        }
+        .resource-button:hover {
+            background-color: #4B5563;
+            border-color: #6B7280;
+        }
+        .slide-indicator {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #4B5563;
+            transition: background-color 0.3s ease;
+        }
+        .slide-indicator.active {
+            background-color: #3B82F6;
+        }
+    </style>
+</head>
+<body class="flex flex-col items-center justify-center min-h-screen p-4 sm:p-6">
+
+    <div class="w-full max-w-5xl mx-auto bg-gray-900 rounded-2xl shadow-2xl overflow-hidden">
+        <!-- Slides Container -->
+        <div id="slides-container" class="p-8 sm:p-12">
+
+            <!-- Slide 0: Title Slide -->
+            <div class="slide active" data-slide="0">
+                <div class="slide-content w-full flex flex-col md:flex-row items-center justify-between gap-8 text-center md:text-left">
+                    <div class="md:w-1/2">
+                        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-blue-400">Ashish Vaswani</h1>
+                        <p class="mt-4 text-xl sm:text-2xl text-gray-300">The Architect of Modern AI</p>
+                        <p class="mt-2 text-lg text-gray-400">A Pioneer Behind the Transformer Revolution</p>
+                    </div>
+                    <div class="md:w-1/2 flex justify-center">
+                        <img src="https://placehold.co/400x400/1F2937/E5E7EB?text=Ashish+Vaswani" alt="Ashish Vaswani" class="rounded-full w-60 h-60 sm:w-80 sm:h-80 object-cover border-4 border-gray-700">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 1: Early Life & Education -->
+            <div class="slide" data-slide="1">
+                <div class="slide-content w-full flex flex-col lg:flex-row items-center gap-8">
+                    <div class="lg:w-1/2 w-full">
+                        <h2 class="text-3xl font-bold text-blue-400 mb-4">Early Life & Education</h2>
+                        <ul class="space-y-3 text-lg text-gray-300 list-disc list-inside">
+                            <li>Grew up in Oman and Nagpur, India, with an early fascination for science and math.</li>
+                            <li>Studied Computer Science at Birla Institute of Technology, Mesra.</li>
+                            <li>Moved to the U.S. and earned a Ph.D. in Computer Science from the University of Southern California (USC).</li>
+                            <li>His research at USC focused on Natural Language Processing (NLP) and machine learning, where he recognized the potential of deep learning.</li>
+                        </ul>
+                         <a href="https://viterbischool.usc.edu/cs/" target="_blank" class="resource-button inline-block mt-6 px-6 py-3 rounded-lg font-semibold text-white">
+                            Learn about USC's AI Research
+                        </a>
+                    </div>
+                    <div class="lg:w-1/2 w-full flex justify-center items-center mt-6 lg:mt-0">
+                        <img src="https://placehold.co/500x350/1F2937/E5E7EB?text=USC+Campus" alt="University of Southern California" class="rounded-lg shadow-lg">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 2: The "Attention Is All You Need" Revolution -->
+            <div class="slide" data-slide="2">
+                <div class="slide-content w-full flex flex-col items-center text-center">
+                    <h2 class="text-3xl font-bold text-blue-400 mb-4">A Paradigm Shift: "Attention Is All You Need"</h2>
+                    <img src="https://placehold.co/700x200/1F2937/E5E7EB?text=Cover+of+the+Paper" alt="Attention Is All You Need Paper" class="rounded-lg shadow-lg mb-6 w-full max-w-3xl">
+                    <div class="max-w-3xl mx-auto">
+                        <p class="text-lg text-gray-300 mb-4">In 2017, while at Google Brain, Vaswani was the lead author of this seminal paper. It introduced the <span class="font-bold text-blue-300">Transformer model</span>, which challenged the dominance of sequential models like RNNs and LSTMs by relying solely on a mechanism called <span class="font-bold text-blue-300">self-attention</span>.</p>
+                        <div class="flex flex-col sm:flex-row justify-center gap-4 mt-6">
+                            <a href="https://arxiv.org/abs/1706.03762" target="_blank" class="resource-button block w-full sm:w-auto px-6 py-3 rounded-lg font-semibold text-white">Read the Paper</a>
+                            <a href="https://www.youtube.com/watch?v=yGTUuEx3GkA" target="_blank" class="resource-button block w-full sm:w-auto px-6 py-3 rounded-lg font-semibold text-white">Watch: What is Attention?</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 3: Deconstructing the Transformer -->
+            <div class="slide" data-slide="3">
+                 <div class="slide-content w-full flex flex-col lg:flex-row items-center gap-8">
+                    <div class="lg:w-1/2 w-full">
+                        <h2 class="text-3xl font-bold text-blue-400 mb-4">Deconstructing the Transformer</h2>
+                        <ul class="space-y-3 text-lg text-gray-300 list-disc list-inside">
+                            <li><span class="font-semibold text-blue-300">Self-Attention:</span> Allows the model to weigh the importance of all other words in a sequence simultaneously.</li>
+                            <li><span class="font-semibold text-blue-300">Parallel Processing:</span> Can process an entire sequence at once, dramatically speeding up training compared to sequential RNNs.</li>
+                            <li><span class="font-semibold text-blue-300">Positional Encodings:</span> Used to give the model information about the order of words, since it doesn't process them sequentially.</li>
+                        </ul>
+                         <a href="https://jalammar.github.io/illustrated-transformer/" target="_blank" class="resource-button inline-block mt-6 px-6 py-3 rounded-lg font-semibold text-white">
+                            Visualize the Transformer
+                        </a>
+                    </div>
+                    <div class="lg:w-1/2 w-full flex justify-center items-center mt-6 lg:mt-0">
+                         <img src="https://placehold.co/500x400/1F2937/E5E7EB?text=Transformer+Architecture" alt="Transformer Architecture Diagram" class="rounded-lg shadow-lg">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 4: Impact on Modern AI -->
+            <div class="slide" data-slide="4">
+                <div class="slide-content w-full flex flex-col items-center text-center">
+                    <h2 class="text-3xl font-bold text-blue-400 mb-4">Impact on Modern AI</h2>
+                    <p class="text-lg text-gray-300 max-w-3xl mb-6">The Transformer is the foundational architecture for nearly all modern Large Language Models (LLMs). Its principles have powered a revolution in AI, with applications from search and translation to creative content and code generation.</p>
+                     <div class="flex justify-center items-center gap-6 my-6">
+                        <img src="https://placehold.co/100x100/1F2937/E5E7EB?text=GPT" alt="GPT Logo" class="rounded-full bg-gray-800 p-2">
+                        <img src="https://placehold.co/100x100/1F2937/E5E7EB?text=BERT" alt="BERT Logo" class="rounded-full bg-gray-800 p-2">
+                         <img src="https://placehold.co/100x100/1F2937/E5E7EB?text=AI" alt="AI Logo" class="rounded-full bg-gray-800 p-2">
+                    </div>
+                    <p class="text-lg text-gray-300 max-w-3xl mb-6">This architecture has also been adapted for other domains, including computer vision (Vision Transformers) and biology (AlphaFold).</p>
+                    <a href="https://chat.openai.com/" target="_blank" class="resource-button inline-block mt-4 px-6 py-3 rounded-lg font-semibold text-white">
+                        See Transformers in Action (ChatGPT)
+                    </a>
+                </div>
+            </div>
+
+            <!-- Slide 5: Beyond the Transformer -->
+            <div class="slide" data-slide="5">
+                 <div class="slide-content w-full flex flex-col lg:flex-row-reverse items-center gap-8">
+                    <div class="lg:w-1/2 w-full">
+                        <h2 class="text-3xl font-bold text-blue-400 mb-4">Beyond the Transformer: New Frontiers</h2>
+                        <ul class="space-y-3 text-lg text-gray-300 list-disc list-inside">
+                             <li>After Google, Vaswani co-founded two AI startups: <span class="font-semibold">Adept AI</span> and <span class="font-semibold">Essential AI</span>.</li>
+                             <li>His vision is to build AI that acts as a true collaborator, capable of understanding and executing complex, multi-step tasks.</li>
+                             <li>Essential AI focuses on solving major global challenges by advancing the capabilities of large-scale models.</li>
+                             <li>His work continues to focus on improving the efficiency, scalability, and reasoning of AI systems.</li>
+                        </ul>
+                         <div class="flex flex-col sm:flex-row gap-4 mt-6">
+                           <a href="https://www.essential.ai/" target="_blank" class="resource-button block w-full sm:w-auto px-6 py-3 rounded-lg font-semibold text-white">Explore Essential AI</a>
+                           <a href="https://www.youtube.com/watch?v=S2TEq_T5YqU" target="_blank" class="resource-button block w-full sm:w-auto px-6 py-3 rounded-lg font-semibold text-white">Watch: The Future of AI</a>
+                        </div>
+                    </div>
+                    <div class="lg:w-1/2 w-full flex justify-center items-center mt-6 lg:mt-0">
+                         <img src="https://placehold.co/500x350/1F2937/E5E7EB?text=Futuristic+AI" alt="Futuristic AI" class="rounded-lg shadow-lg">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Navigation -->
+        <div class="bg-gray-800 p-4 flex items-center justify-between">
+            <button id="prev-btn" class="nav-button bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-lg disabled:opacity-50 disabled:cursor-not-allowed">Previous</button>
+            <div id="slide-indicators" class="flex space-x-3">
+                <!-- Indicators will be generated by JS -->
+            </div>
+            <button id="next-btn" class="nav-button bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-lg disabled:opacity-50 disabled:cursor-not-allowed">Next</button>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const slides = document.querySelectorAll('.slide');
+            const nextBtn = document.getElementById('next-btn');
+            const prevBtn = document.getElementById('prev-btn');
+            const indicatorsContainer = document.getElementById('slide-indicators');
+            let currentSlide = 0;
+            const totalSlides = slides.length;
+
+            // Generate slide indicators
+            for (let i = 0; i < totalSlides; i++) {
+                const indicator = document.createElement('div');
+                indicator.classList.add('slide-indicator');
+                indicator.dataset.slideIndex = i;
+                indicatorsContainer.appendChild(indicator);
+            }
+            const indicators = document.querySelectorAll('.slide-indicator');
+            
+            function showSlide(slideIndex) {
+                slides.forEach((slide, index) => {
+                    if (index === slideIndex) {
+                        slide.classList.add('active');
+                    } else {
+                        slide.classList.remove('active');
+                    }
+                });
+                
+                // Update indicators
+                indicators.forEach((indicator, index) => {
+                    if (index === slideIndex) {
+                        indicator.classList.add('active');
+                    } else {
+                        indicator.classList.remove('active');
+                    }
+                });
+
+                // Update button states
+                prevBtn.disabled = slideIndex === 0;
+                nextBtn.disabled = slideIndex === totalSlides - 1;
+            }
+
+            nextBtn.addEventListener('click', () => {
+                if (currentSlide < totalSlides - 1) {
+                    currentSlide++;
+                    showSlide(currentSlide);
+                }
+            });
+
+            prevBtn.addEventListener('click', () => {
+                if (currentSlide > 0) {
+                    currentSlide--;
+                    showSlide(currentSlide);
+                }
+            });
+            
+            indicators.forEach(indicator => {
+                indicator.addEventListener('click', (e) => {
+                    const slideIndex = parseInt(e.target.dataset.slideIndex);
+                    currentSlide = slideIndex;
+                    showSlide(currentSlide);
+                })
+            })
+
+            // Initial setup
+            showSlide(currentSlide);
+        });
+    </script>
+</body>
+</html>
