@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>George Boole: The Father of the Digital Age</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        .slide {
+            min-height: 80vh; /* Ensure slides take up most of the viewport height */
+        }
+        .button-link {
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+        .button-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+<body class="bg-gray-100 flex flex-col items-center justify-center min-h-screen p-4">
+
+    <div class="w-full max-w-4xl bg-white rounded-2xl shadow-2xl overflow-hidden">
+        <!-- Slides Container -->
+        <div id="presentation-container">
+
+            <!-- Slide 1: Title -->
+            <div id="slide-1" class="slide p-8 md:p-12 flex flex-col items-center justify-center text-center">
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">George Boole</h1>
+                <p class="text-xl md:text-2xl text-gray-600 mb-8">The Father of the Digital Age</p>
+                <img src="https://placehold.co/600x400/E2E8F0/4A5568?text=George+Boole"
+                     onerror="this.onerror=null;this.src='https://placehold.co/600x400/E2E8F0/4A5568?text=Image+Not+Found';"
+                     alt="Portrait of George Boole" class="w-full max-w-md rounded-lg shadow-lg">
+                <p class="text-sm text-gray-500 mt-4 italic">An English mathematician, educator, philosopher and logician.</p>
+            </div>
+
+            <!-- Slide 2: Early Life -->
+            <div id="slide-2" class="slide p-8 md:p-12 hidden flex-col lg:flex-row items-center justify-center gap-8">
+                <img src="https://placehold.co/600x400/E2E8F0/4A5568?text=Lincoln,+England+(19th+Century)"
+                     onerror="this.onerror=null;this.src='https://placehold.co/600x400/E2E8F0/4A5568?text=Image+Not+Found';"
+                     alt="19th Century Lincoln, England" class="w-full lg:w-1/2 rounded-lg shadow-lg">
+                <div class="lg:w-1/2">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-4">A Humble Beginning</h2>
+                    <ul class="space-y-3 text-lg text-gray-700 list-disc list-inside">
+                        <li>Born in Lincoln, England, in 1815 to a shoemaker father.</li>
+                        <li>Received limited formal education but was a self-taught prodigy.</li>
+                        <li>Mastered Latin, Greek, and advanced mathematics on his own.</li>
+                        <li>Became a teacher at age 16 to support his family.</li>
+                        <li>Appointed Professor of Mathematics at Queen's College, Cork in 1849, despite lacking a university degree.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Slide 3: Major Contributions -->
+            <div id="slide-3" class="slide p-8 md:p-12 hidden flex-col items-center justify-center text-center">
+                 <h2 class="text-3xl font-bold text-gray-800 mb-4">The Laws of Thought</h2>
+                 <p class="text-lg text-gray-700 mb-6 max-w-2xl">Boole's greatest insight was that logic could be expressed using algebra. His system, now called Boolean Algebra, became the foundation of computer science.</p>
+                <img src="https://placehold.co/800x300/E2E8F0/4A5568?text=Boolean+Logic+Gates+(AND,+OR,+NOT)"
+                     onerror="this.onerror=null;this.src='https://placehold.co/800x300/E2E8F0/4A5568?text=Image+Not+Found';"
+                     alt="Illustration of Boolean Logic Gates" class="w-full max-w-2xl rounded-lg shadow-lg mb-6">
+                <div class="text-left max-w-2xl mx-auto">
+                     <h3 class="text-xl font-semibold text-gray-800 mb-2">Key Concepts:</h3>
+                     <ul class="space-y-2 text-md text-gray-700 list-disc list-inside">
+                        <li><strong>Binary System:</strong> Propositions are either TRUE (1) or FALSE (0).</li>
+                        <li><strong>Logical Operators:</strong> He defined core operations like AND, OR, and NOT.</li>
+                        <li><strong>Symbolic Logic:</strong> His 1854 book, <em>"An Investigation of the Laws of Thought,"</em> detailed how these principles could be used to model the reasoning of the human mind.</li>
+                     </ul>
+                </div>
+            </div>
+
+            <!-- Slide 4: Contributions to AI -->
+            <div id="slide-4" class="slide p-8 md:p-12 hidden flex-col items-center justify-center text-center">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">The Bedrock of Artificial Intelligence</h2>
+                <p class="text-lg text-gray-700 mb-6 max-w-3xl">Boole's work provided the essential language for computation. The ability to make decisions based on logical conditions is the most fundamental aspect of any computer program, including AI.</p>
+                 <img src="https://placehold.co/700x400/E2E8F0/4A5568?text=From+Logic+to+Modern+AI"
+                      onerror="this.onerror=null;this.src='https://placehold.co/700x400/E2E8F0/4A5568?text=Image+Not+Found';"
+                      alt="Conceptual image linking Boolean Logic to AI" class="w-full max-w-xl rounded-lg shadow-lg mb-6">
+                <ul class="space-y-2 text-md text-gray-700 list-disc list-inside text-left max-w-2xl">
+                    <li><strong>Computer Hardware:</strong> Digital circuits and microchips are built from logic gates that perform Boolean operations.</li>
+                    <li><strong>Decision Making:</strong> All programming, including AI algorithms, uses "if-then-else" statements, which are direct applications of Boolean logic.</li>
+                    <li><strong>Symbolic AI:</strong> Early AI research focused on representing human knowledge with logical rules, a direct extension of Boole's ideas.</li>
+                </ul>
+            </div>
+
+            <!-- Slide 5: Modern Day Influence -->
+            <div id="slide-5" class="slide p-8 md:p-12 hidden flex-col lg:flex-row-reverse items-center justify-center gap-8">
+                 <img src="https://placehold.co/600x400/E2E8F0/4A5568?text=Modern+Computer+Motherboard"
+                      onerror="this.onerror=null;this.src='https://placehold.co/600x400/E2E8F0/4A5568?text=Image+Not+Found';"
+                      alt="Modern Computer Motherboard" class="w-full lg:w-1/2 rounded-lg shadow-lg">
+                <div class="lg:w-1/2">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-4">Boole's Logic in Your Life</h2>
+                    <p class="text-lg text-gray-700 mb-4">You use Boolean logic every day, often without realizing it:</p>
+                    <ul class="space-y-3 text-lg text-gray-700 list-disc list-inside">
+                        <li><strong>Search Engines:</strong> Using "AND", "OR", and "NOT" to combine or exclude search terms is pure Boolean logic.</li>
+                        <li><strong>Software & Apps:</strong> Every decision an app makes, from logging you in to showing a notification, is based on evaluating true/false conditions.</li>
+                        <li><strong>Electronics:</strong> From your smartphone to your smart fridge, all digital devices are powered by circuits designed with Boolean principles.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Slide 6: Additional Resources -->
+            <div id="slide-6" class="slide p-8 md:p-12 hidden flex-col items-center justify-center text-center">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Learn More</h2>
+                <p class="text-lg text-gray-700 mb-8 max-w-2xl">Explore these resources to dive deeper into the life and work of George Boole and the principles of Boolean Logic.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-lg">
+                    <button onclick="window.open('https://www.youtube.com/watch?v=rRUz0iK4_oA', '_blank')" class="button-link w-full bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg shadow-md hover:bg-blue-700">
+                        Video: Intro to Boolean Algebra
+                    </button>
+                    <button onclick="window.open('https://www.allaboutcircuits.com/textbook/digital/chpt-7/boolean-algebra/', '_blank')" class="button-link w-full bg-green-600 text-white font-semibold py-3 px-6 rounded-lg shadow-md hover:bg-green-700">
+                        Article: Boolean Algebra Explained
+                    </button>
+                    <button onclick="window.open('https://plato.stanford.edu/entries/boole/', '_blank')" class="button-link w-full bg-indigo-600 text-white font-semibold py-3 px-6 rounded-lg shadow-md hover:bg-indigo-700">
+                        In-Depth: Stanford Encyclopedia
+                    </button>
+                     <button onclick="window.open('https://www.britannica.com/biography/George-Boole', '_blank')" class="button-link w-full bg-gray-700 text-white font-semibold py-3 px-6 rounded-lg shadow-md hover:bg-gray-800">
+                        Biography: George Boole
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <div class="bg-gray-800 p-4 flex justify-between items-center">
+            <button id="prev-btn" class="bg-gray-600 hover:bg-gray-500 text-white font-bold py-2 px-6 rounded-lg transition-colors duration-200">Previous</button>
+            <div id="slide-counter" class="text-white text-lg font-medium">1 / 6</div>
+            <button id="next-btn" class="bg-blue-600 hover:bg-blue-500 text-white font-bold py-2 px-6 rounded-lg transition-colors duration-200">Next</button>
+        </div>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const slides = document.querySelectorAll('.slide');
+            const prevBtn = document.getElementById('prev-btn');
+            const nextBtn = document.getElementById('next-btn');
+            const slideCounter = document.getElementById('slide-counter');
+            
+            let currentSlide = 0;
+            const totalSlides = slides.length;
+
+            function showSlide(index) {
+                slides.forEach((slide, i) => {
+                    if (i === index) {
+                        slide.classList.remove('hidden');
+                        slide.classList.add('flex');
+                    } else {
+                        slide.classList.add('hidden');
+                        slide.classList.remove('flex');
+                    }
+                });
+                
+                // Update counter
+                slideCounter.textContent = `${index + 1} / ${totalSlides}`;
+                
+                // Update button states
+                prevBtn.disabled = index === 0;
+                nextBtn.disabled = index === totalSlides - 1;
+
+                prevBtn.classList.toggle('opacity-50', index === 0);
+                prevBtn.classList.toggle('cursor-not-allowed', index === 0);
+                nextBtn.classList.toggle('opacity-50', index === totalSlides - 1);
+                nextBtn.classList.toggle('cursor-not-allowed', index === totalSlides - 1);
+            }
+
+            nextBtn.addEventListener('click', () => {
+                if (currentSlide < totalSlides - 1) {
+                    currentSlide++;
+                    showSlide(currentSlide);
+                }
+            });
+
+            prevBtn.addEventListener('click', () => {
+                if (currentSlide > 0) {
+                    currentSlide--;
+                    showSlide(currentSlide);
+                }
+            });
+
+            // Initial setup
+            showSlide(currentSlide);
+        });
+    </script>
+</body>
+</html>
