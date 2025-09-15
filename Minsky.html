@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marvin Minsky: Architect of AI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .slide {
+            display: none;
+            transition: opacity 0.5s ease-in-out;
+        }
+        .slide.active {
+            display: flex;
+            opacity: 1;
+        }
+        .fade-in {
+            animation: fadeIn 0.8s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        /* Custom button style for resource links */
+        .resource-btn {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.75rem 1.5rem;
+            background-color: #3b82f6; /* Blue-500 */
+            color: white;
+            font-weight: 600;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        .resource-btn:hover {
+            background-color: #2563eb; /* Blue-600 */
+            transform: translateY(-2px);
+        }
+        .resource-btn svg {
+            margin-right: 0.5rem;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white flex flex-col items-center justify-center min-h-screen p-4">
+
+    <div id="presentation-container" class="w-full max-w-4xl bg-gray-800 rounded-2xl shadow-2xl overflow-hidden">
+        <!-- Slide Container -->
+        <div id="slides-wrapper" class="relative h-[600px]">
+            <!-- Slide 1: Title -->
+            <div class="slide active fade-in w-full h-full flex-col items-center justify-center text-center p-8 bg-gradient-to-br from-gray-800 to-gray-900">
+                <img src="https://placehold.co/150x150/4a5568/ffffff?text=M.M." alt="Marvin Minsky" class="w-36 h-36 rounded-full mb-6 border-4 border-blue-500 shadow-lg" onerror="this.onerror=null;this.src='https://placehold.co/150x150/4a5568/ffffff?text=Marvin+Minsky';">
+                <h1 class="text-4xl md:text-5xl font-bold text-blue-400 mb-2">Marvin Minsky</h1>
+                <p class="text-2xl md:text-3xl font-light text-gray-300">Architect of Artificial Intelligence</p>
+                <p class="mt-4 text-gray-400">An Interactive Journey</p>
+            </div>
+
+            <!-- Slide 2: Early Life -->
+            <div class="slide w-full h-full flex-col items-center justify-center p-8">
+                <h2 class="text-3xl font-bold text-blue-400 mb-6">The Prodigy's Beginnings</h2>
+                <div class="flex flex-col md:flex-row items-center gap-8">
+                    <img src="https://placehold.co/400x300/4a5568/ffffff?text=University" alt="University Campus" class="w-full md:w-1/2 rounded-lg shadow-lg" onerror="this.onerror=null;this.src='https://placehold.co/400x300/4a5568/ffffff?text=Education';">
+                    <ul class="text-lg space-y-3 text-gray-300 list-disc list-inside text-left">
+                        <li>Born in New York City (1927).</li>
+                        <li>Attended Bronx High School of Science.</li>
+                        <li>Served in the U.S. Navy in WWII.</li>
+                        <li>B.A. in Mathematics from Harvard (1950).</li>
+                        <li>Ph.D. in Mathematics from Princeton (1954).</li>
+                        <li>Joined MIT in 1958, co-founding the AI Lab.</li>
+                    </ul>
+                </div>
+                 <a href="https://www.youtube.com/watch?v=A8H7_j-SgM4" target="_blank" class="resource-btn mt-8">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                    Video: Minsky on his Early Days
+                </a>
+            </div>
+            
+            <!-- Slide 3: Major Contributions - Society of Mind -->
+            <div class="slide w-full h-full flex-col items-center justify-center p-8">
+                <h2 class="text-3xl font-bold text-blue-400 mb-6">The "Society of Mind" Theory</h2>
+                <div class="flex flex-col md:flex-row items-center gap-8">
+                     <img src="https://placehold.co/400x300/4a5568/ffffff?text=Agents" alt="Society of Mind concept" class="w-full md:w-1/2 rounded-lg shadow-lg" onerror="this.onerror=null;this.src='https://placehold.co/400x300/4a5568/ffffff?text=Agents';">
+                    <div class="text-lg space-y-3 text-gray-300 text-left">
+                        <p>In his 1986 book, Minsky proposed that intelligence isn't a single entity.</p>
+                        <p>Instead, it emerges from the interactions of many simple, non-intelligent processes called <strong class="text-blue-400">"agents"</strong>.</p>
+                        <p>Each agent performs a specific task, and complex thought arises from their collaboration and conflict.</p>
+                    </div>
+                </div>
+                <a href="https://web.media.mit.edu/~minsky/papers/SocietyOfMind.html" target="_blank" class="resource-btn mt-8">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                    Illustration: How Agents Work
+                </a>
+            </div>
+
+            <!-- Slide 4: Major Contributions - Inventions -->
+            <div class="slide w-full h-full flex-col items-center justify-center p-8">
+                <h2 class="text-3xl font-bold text-blue-400 mb-6">Building the Future</h2>
+                <div class="flex flex-col md:flex-row items-center gap-8">
+                    <img src="https://placehold.co/400x300/4a5568/ffffff?text=Robotic+Hand" alt="Early Robotic Hand" class="w-full md:w-1/2 rounded-lg shadow-lg" onerror="this.onerror=null;this.src='https://placehold.co/400x300/4a5568/ffffff?text=Invention';">
+                    <ul class="text-lg space-y-3 text-gray-300 list-disc list-inside text-left">
+                        <li>Invented the first head-mounted graphical display (a precursor to VR/AR).</li>
+                        <li>Built early robotic hands with tactile sensors.</li>
+                        <li>Created visual scanners for machines to "see."</li>
+                        <li>Pioneered telepresence and robotics.</li>
+                    </ul>
+                </div>
+                 <a href="https://www.youtube.com/watch?v=0_20-D6tTMA" target="_blank" class="resource-btn mt-8">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                    Video: See Minsky's Inventions
+                </a>
+            </div>
+
+            <!-- Slide 5: Perceptrons Controversy -->
+            <div class="slide w-full h-full flex-col items-center justify-center p-8 text-center">
+                <h2 class="text-3xl font-bold text-blue-400 mb-6">The "Perceptrons" Controversy</h2>
+                <div class="flex flex-col md:flex-row items-center gap-8">
+                    <img src="https://placehold.co/200x300/4a5568/ffffff?text=Perceptrons" alt="Perceptrons Book Cover" class="w-1/3 md:w-1/4 rounded-lg shadow-lg" onerror="this.onerror=null;this.src='https://placehold.co/200x300/4a5568/ffffff?text=Book';">
+                    <div class="text-lg space-y-3 text-gray-300 text-left">
+                        <p>In 1969, Minsky & Papert's book "Perceptrons" proved the limitations of simple neural networks.</p>
+                        <p>It showed they couldn't solve basic problems like XOR, leading to an <strong class="text-blue-400">"AI Winter"</strong> as funding for neural net research dried up.</p>
+                        <p>However, this critique also pushed researchers to develop the multi-layered networks that power today's deep learning.</p>
+                    </div>
+                </div>
+                <a href="https://en.wikipedia.org/wiki/Perceptrons_(book)" target="_blank" class="resource-btn mt-8">
+                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+                    Read: The Impact of Perceptrons
+                </a>
+            </div>
+
+            <!-- Slide 6: Influence on Modern AI -->
+            <div class="slide w-full h-full flex-col items-center justify-center p-8">
+                <h2 class="text-3xl font-bold text-blue-400 mb-6">Minsky's Enduring Legacy</h2>
+                <div class="flex flex-col md:flex-row items-center gap-8">
+                    <img src="https://placehold.co/400x300/4a5568/ffffff?text=Modern+AI" alt="Modern AI Graphic" class="w-full md:w-1/2 rounded-lg shadow-lg" onerror="this.onerror=null;this.src='https://placehold.co/400x300/4a5568/ffffff?text=Legacy';">
+                    <ul class="text-lg space-y-3 text-gray-300 list-disc list-inside text-left">
+                        <li>His work spurred the creation of multi-layer networks, the basis of <strong class="text-blue-400">Deep Learning</strong>.</li>
+                        <li>The "Society of Mind" influences modern cognitive architectures and multi-agent systems.</li>
+                        <li>His focus on <strong class="text-blue-400">"common sense reasoning"</strong> remains a key challenge in AI.</li>
+                        <li>His early inventions paved the way for today's robotics, VR, and AR.</li>
+                    </ul>
+                </div>
+                 <a href="https://www.youtube.com/watch?v=Pb9Cv0_p7F4" target="_blank" class="resource-btn mt-8">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                    Video: Minsky on the Future of AI
+                </a>
+            </div>
+
+        </div>
+
+        <!-- Navigation -->
+        <div class="bg-gray-700 p-4 flex justify-between items-center">
+            <button id="prev-btn" class="px-6 py-2 bg-blue-600 rounded-lg hover:bg-blue-700 transition-colors disabled:bg-gray-500 disabled:cursor-not-allowed">Prev</button>
+            <div id="dots-container" class="flex space-x-2">
+                <!-- Dots will be generated by JS -->
+            </div>
+            <button id="next-btn" class="px-6 py-2 bg-blue-600 rounded-lg hover:bg-blue-700 transition-colors">Next</button>
+        </div>
+    </div>
+
+    <script>
+        const slides = document.querySelectorAll('.slide');
+        const prevBtn = document.getElementById('prev-btn');
+        const nextBtn = document.getElementById('next-btn');
+        const dotsContainer = document.getElementById('dots-container');
+
+        let currentSlide = 0;
+        const totalSlides = slides.length;
+
+        // Create dots
+        for (let i = 0; i < totalSlides; i++) {
+            const dot = document.createElement('button');
+            dot.classList.add('w-3', 'h-3', 'rounded-full', 'transition-colors');
+            dot.dataset.slide = i;
+            dotsContainer.appendChild(dot);
+        }
+        const dots = dotsContainer.querySelectorAll('button');
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                if (i === index) {
+                    slide.classList.add('active');
+                    slide.classList.add('fade-in');
+                } else {
+                    slide.classList.remove('active');
+                     slide.classList.remove('fade-in');
+                }
+            });
+            updateNav(index);
+        }
+
+        function updateNav(index) {
+            currentSlide = index;
+
+            // Update buttons
+            prevBtn.disabled = currentSlide === 0;
+            nextBtn.disabled = currentSlide === totalSlides - 1;
+
+            // Update dots
+            dots.forEach((dot, i) => {
+                if (i === currentSlide) {
+                    dot.classList.add('bg-blue-500');
+                    dot.classList.remove('bg-gray-500');
+                } else {
+                    dot.classList.add('bg-gray-500');
+                    dot.classList.remove('bg-blue-500');
+                }
+            });
+        }
+        
+        nextBtn.addEventListener('click', () => {
+            if (currentSlide < totalSlides - 1) {
+                showSlide(currentSlide + 1);
+            }
+        });
+
+        prevBtn.addEventListener('click', () => {
+            if (currentSlide > 0) {
+                showSlide(currentSlide - 1);
+            }
+        });
+
+        dots.forEach(dot => {
+            dot.addEventListener('click', () => {
+                showSlide(parseInt(dot.dataset.slide));
+            });
+        });
+
+        // Initial setup
+        showSlide(0);
+
+    </script>
+</body>
+</html>
