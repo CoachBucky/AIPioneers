@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Allen Newell: An AI Pioneer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .slide {
+            display: none;
+        }
+        .slide.active {
+            display: block;
+        }
+        .resource-btn {
+            display: inline-block;
+            background-color: #1E40AF; /* Darker Blue */
+            color: white;
+            padding: 8px 16px;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+            font-size: 0.875rem;
+            margin-top: 1rem;
+        }
+        .resource-btn:hover {
+            background-color: #1D4ED8; /* Brighter Blue */
+        }
+        .nav-btn {
+             background-color: #4B5563; /* Gray */
+             color: white;
+             padding: 10px 20px;
+             border-radius: 8px;
+             cursor: pointer;
+             transition: background-color 0.3s;
+             border: none;
+        }
+        .nav-btn:hover {
+             background-color: #6B7280; /* Lighter Gray */
+        }
+    </style>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+
+    <div id="presentation" class="w-full max-w-4xl bg-white rounded-2xl shadow-2xl overflow-hidden">
+
+        <!-- Slide 1: Title -->
+        <div id="slide1" class="slide active p-8 md:p-12">
+            <div class="text-center">
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-800">Allen Newell</h1>
+                <p class="text-xl md:text-2xl text-blue-700 mt-2">Architect of Artificial Intelligence</p>
+                <img src="https://placehold.co/800x400/E2E8F0/4A5568?text=Allen+Newell" alt="Portrait of Allen Newell" class="my-6 rounded-lg mx-auto shadow-md" onerror="this.onerror=null;this.src='https://placehold.co/800x400/E2E8F0/4A5568?text=Image+Not+Found';">
+                <p class="text-gray-600 max-w-2xl mx-auto">An interactive journey through the life and work of a pioneering mind who laid the foundations for modern AI.</p>
+                <button onclick="changeSlide(2)" class="nav-btn mt-8">Start Presentation</button>
+            </div>
+        </div>
+
+        <!-- Slide 2: Early Life -->
+        <div id="slide2" class="slide p-8 md:p-12">
+             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div>
+                    <h2 class="text-3xl font-bold text-gray-800">The Formative Years</h2>
+                    <ul class="mt-4 list-disc list-inside text-gray-700 space-y-2">
+                        <li>Born in San Francisco, CA (1927).</li>
+                        <li>Served in the U.S. Navy following World War II.</li>
+                        <li>Earned a bachelor's degree in Physics from Stanford University.</li>
+                        <li>Pursued graduate studies in mathematics at Princeton University.</li>
+                        <li>Joined the prestigious RAND Corporation as a research scientist in 1950.</li>
+                    </ul>
+                     <a href="https://www.rand.org/about/history.html" target="_blank" class="resource-btn">Learn about the RAND Corporation</a>
+                </div>
+                <img src="https://placehold.co/600x400/D1D5DB/4B5563?text=Stanford+University" alt="Stanford University Campus" class="rounded-lg shadow-md" onerror="this.onerror=null;this.src='https://placehold.co/600x400/E2E8F0/4A5568?text=Image+Not+Found';">
+            </div>
+            <div class="flex justify-between mt-8">
+                <button onclick="changeSlide(1)" class="nav-btn">Previous</button>
+                <button onclick="changeSlide(3)" class="nav-btn">Next</button>
+            </div>
+        </div>
+
+        <!-- Slide 3: The Partnership -->
+        <div id="slide3" class="slide p-8 md:p-12">
+            <h2 class="text-3xl font-bold text-gray-800 text-center">A Meeting of Minds</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mt-6">
+                 <img src="https://placehold.co/600x400/D1D5DB/4B5563?text=Newell+&+Simon" alt="Allen Newell and Herbert A. Simon" class="rounded-lg shadow-md" onerror="this.onerror=null;this.src='https://placehold.co/600x400/E2E8F0/4A5568?text=Image+Not+Found';">
+                <div>
+                    <p class="text-gray-700 mb-4">At the RAND Corporation, Newell met Herbert A. Simon, a consultant and a brilliant political scientist and economist. They quickly discovered a shared fascination with human decision-making.</p>
+                    <p class="text-gray-700 font-semibold">Their core belief: the complex processes of the human mind could be simulated with computers, treating intelligence as a form of symbol manipulation.</p>
+                     <a href="https://www.youtube.com/watch?v=Vo2-h_oPSaA" target="_blank" class="resource-btn">Watch: The Birth of AI</a>
+                </div>
+            </div>
+             <div class="flex justify-between mt-8">
+                <button onclick="changeSlide(2)" class="nav-btn">Previous</button>
+                <button onclick="changeSlide(4)" class="nav-btn">Next</button>
+            </div>
+        </div>
+
+        <!-- Slide 4: Logic Theory Machine -->
+        <div id="slide4" class="slide p-8 md:p-12">
+            <h2 class="text-3xl font-bold text-gray-800">Major Contribution: The Logic Theory Machine (1956)</h2>
+             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mt-6">
+                <div>
+                    <p class="text-gray-700 mb-4">With Cliff Shaw, Newell and Simon created what is widely considered the <span class="font-bold">first artificial intelligence program</span>.</p>
+                    <ul class="mt-4 list-disc list-inside text-gray-700 space-y-2">
+                        <li>It was not a calculator; it was a "thinking machine."</li>
+                        <li>It could prove theorems in symbolic logic from Whitehead and Russell's *Principia Mathematica*.</li>
+                        <li>It independently proved 38 of the first 52 theorems, even discovering a more elegant proof for one.</li>
+                    </ul>
+                     <a href="https://history-computer.com/logic-theorist/" target="_blank" class="resource-btn">Illustration: How it Worked</a>
+                </div>
+                <img src="https://placehold.co/600x400/D1D5DB/4B5563?text=JOHNNIAC+Computer" alt="JOHNNIAC vintage computer" class="rounded-lg shadow-md" onerror="this.onerror=null;this.src='https://placehold.co/600x400/E2E8F0/4A5568?text=Image+Not+Found';">
+            </div>
+            <div class="flex justify-between mt-8">
+                <button onclick="changeSlide(3)" class="nav-btn">Previous</button>
+                <button onclick="changeSlide(5)" class="nav-btn">Next</button>
+            </div>
+        </div>
+
+        <!-- Slide 5: General Problem Solver -->
+        <div id="slide5" class="slide p-8 md:p-12">
+            <h2 class="text-3xl font-bold text-gray-800">Major Contribution: General Problem Solver (1957)</h2>
+            <p class="text-gray-600 mt-2">Building on their success, the team developed a more ambitious program designed to mimic human problem-solving strategies.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mt-6">
+                 <img src="https://placehold.co/600x400/D1D5DB/4B5563?text=Towers+of+Hanoi" alt="Towers of Hanoi Puzzle" class="rounded-lg shadow-md" onerror="this.onerror=null;this.src='https://placehold.co/600x400/E2E8F0/4A5568?text=Image+Not+Found';">
+                <div>
+                     <p class="text-gray-700 mb-2 font-semibold">It was based on "Means-Ends Analysis":</p>
+                    <ol class="list-decimal list-inside text-gray-700 space-y-2">
+                         <li>Identify the main goal.</li>
+                         <li>Assess the current situation.</li>
+                         <li>Find an action (an "operator") to reduce the difference between the current state and the goal.</li>
+                         <li>Set a new subgoal and repeat the process.</li>
+                     </ol>
+                     <a href="https://www.youtube.com/watch?v=y3b-w-Sgi0I" target="_blank" class="resource-btn">Watch: Means-Ends Analysis Explained</a>
+                </div>
+            </div>
+            <div class="flex justify-between mt-8">
+                <button onclick="changeSlide(4)" class="nav-btn">Previous</button>
+                <button onclick="changeSlide(6)" class="nav-btn">Next</button>
+            </div>
+        </div>
+
+        <!-- Slide 6: Influence -->
+        <div id="slide6" class="slide p-8 md:p-12">
+            <h2 class="text-3xl font-bold text-gray-800 text-center">Newell's Enduring Legacy</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+                <div class="bg-gray-50 p-4 rounded-lg">
+                    <h3 class="font-semibold text-lg text-blue-800">Heuristic Search</h3>
+                    <p class="text-gray-600 text-sm">The "rules of thumb" used in his programs are foundational to modern search algorithms in GPS, web search, and game AI.</p>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-lg">
+                    <h3 class="font-semibold text-lg text-blue-800">Cognitive Architectures</h3>
+                    <p class="text-gray-600 text-sm">His later work on Soar, a unified theory of cognition, continues to influence the design of general-purpose AI systems.</p>
+                </div>
+                 <div class="bg-gray-50 p-4 rounded-lg">
+                    <h3 class="font-semibold text-lg text-blue-800">Symbolic AI</h3>
+                    <p class="text-gray-600 text-sm">His work is the bedrock of knowledge-based expert systems and symbolic reasoning in AI.</p>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-lg">
+                    <h3 class="font-semibold text-lg text-blue-800">Physical Symbol System Hypothesis</h3>
+                    <p class="text-gray-600 text-sm">The groundbreaking idea that intelligence arises from the manipulation of symbols according to rules.</p>
+                </div>
+            </div>
+             <a href="https://plato.stanford.edu/entries/cognitive-science/" target="_blank" class="resource-btn block text-center mx-auto mt-6">Read: The Physical Symbol System Hypothesis</a>
+            <div class="flex justify-between mt-8">
+                <button onclick="changeSlide(5)" class="nav-btn">Previous</button>
+                <button onclick="changeSlide(7)" class="nav-btn">Next</button>
+            </div>
+        </div>
+
+         <!-- Slide 7: Conclusion -->
+        <div id="slide7" class="slide p-8 md:p-12 text-center">
+            <h2 class="text-4xl font-bold text-gray-800">A True Pioneer</h2>
+            <img src="https://placehold.co/800x300/1F2937/9CA3AF?text=The+Future+of+AI" alt="Abstract AI graphic" class="my-6 rounded-lg mx-auto shadow-md" onerror="this.onerror=null;this.src='https://placehold.co/800x300/E2E8F0/4A5568?text=Image+Not+Found';">
+            <p class="text-gray-700 max-w-3xl mx-auto text-lg">
+                Allen Newell's work transformed computer science from a field of mere calculation into a powerful tool for understanding the mind. His collaborations, groundbreaking programs, and theoretical insights established the very foundations of Artificial Intelligence. His legacy lives on in the smart devices, complex algorithms, and AI systems we interact with every day.
+            </p>
+            <div class="flex justify-center gap-4 mt-8">
+                <button onclick="changeSlide(6)" class="nav-btn">Previous</button>
+                <button onclick="changeSlide(1)" class="nav-btn">Restart Presentation</button>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        let currentSlide = 1;
+
+        function showSlide(slideNumber) {
+            document.querySelectorAll('.slide').forEach(slide => {
+                slide.classList.remove('active');
+            });
+            document.getElementById('slide' + slideNumber).classList.add('active');
+        }
+
+        function changeSlide(newSlide) {
+            currentSlide = newSlide;
+            showSlide(currentSlide);
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            showSlide(currentSlide);
+        });
+    </script>
+</body>
+</html>
