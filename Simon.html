@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Herbert A. Simon: An Interactive Presentation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f4f8; /* Light blue-gray background */
+        }
+        .slide {
+            display: none; /* Hidden by default */
+            animation: fadeIn 0.6s ease-in-out;
+        }
+        .slide.active {
+            display: block; /* Shown when active */
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .btn {
+            transition: all 0.3s ease;
+        }
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        .resource-btn {
+            background-color: #1e40af; /* A deep blue */
+            color: white;
+        }
+        .resource-btn:hover {
+            background-color: #1d4ed8;
+        }
+        .nav-btn {
+            background-color: #ffffff;
+            color: #1e3a8a;
+            border: 1px solid #d1d5db;
+        }
+        .nav-btn:hover {
+            background-color: #f9fafb;
+        }
+    </style>
+</head>
+<body class="flex flex-col items-center justify-center min-h-screen p-4">
+
+    <div id="presentation-container" class="w-full max-w-4xl bg-white rounded-2xl shadow-2xl overflow-hidden">
+        <div class="p-8 md:p-12 min-h-[550px] flex flex-col">
+
+            <!-- Slide 1: Title -->
+            <div id="slide-1" class="slide active flex-grow">
+                <div class="flex flex-col md:flex-row items-center justify-center h-full text-center md:text-left">
+                    <img src="https://placehold.co/200x200/E2E8F0/4A5568?text=Herbert+A.+Simon" alt="Portrait of Herbert A. Simon" class="w-40 h-40 md:w-48 md:h-48 rounded-full object-cover mb-6 md:mb-0 md:mr-10 border-4 border-gray-200">
+                    <div>
+                        <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-2">Herbert A. Simon</h1>
+                        <p class="text-xl md:text-2xl text-blue-700 font-semibold">Architect of the Artificial Mind</p>
+                        <p class="mt-4 text-gray-600">An interactive exploration of a true AI pioneer.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 2: Early Life -->
+            <div id="slide-2" class="slide flex-grow">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center">The Making of a Polymath</h2>
+                <div class="flex flex-col md:flex-row items-center gap-8">
+                    <img src="https://placehold.co/600x400/E2E8F0/4A5568?text=University+of+Chicago" alt="University of Chicago" class="w-full md:w-1/2 rounded-lg shadow-md object-cover">
+                    <div class="md:w-1/2">
+                        <ul class="space-y-4 text-gray-700 text-lg">
+                            <li><span class="font-semibold text-blue-800">Born:</span> Milwaukee, Wisconsin (1916).</li>
+                            <li><span class="font-semibold text-blue-800">Education:</span> Ph.D. in Political Science, University of Chicago (1943).</li>
+                            <li><span class="font-semibold text-blue-800">Focus:</span> An early interdisciplinary approach, blending economics, math, and social sciences.</li>
+                            <li><span class="font-semibold text-blue-800">Key Interest:</span> Fascinated by human decision-making processes within organizations.</li>
+                        </ul>
+                         <a href="https://www.nobelprize.org/prizes/economic-sciences/1978/simon/biographical/" target="_blank" class="resource-btn inline-block font-bold py-2 px-5 rounded-lg mt-8 btn">
+                            Learn About His Background
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 3: Major Contributions -->
+            <div id="slide-3" class="slide flex-grow">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center">Challenging Economic Theory</h2>
+                 <div class="flex flex-col md:flex-row items-center gap-8">
+                    <div class="md:w-1/2">
+                        <h3 class="text-2xl font-semibold text-blue-800 mb-3">Bounded Rationality & Satisficing</h3>
+                        <p class="text-gray-700 text-lg mb-4">Simon argued against the idea of a perfectly rational "economic man." He introduced two revolutionary concepts:</p>
+                        <ul class="space-y-3 text-gray-700 list-disc list-inside">
+                            <li><b>Bounded Rationality:</b> Human decisions are limited ("bounded") by the information available, our cognitive limits, and time.</li>
+                            <li><b>Satisficing:</b> We don't seek the *optimal* solution. Instead, we choose the first option that is "good enough" or satisfactory.</li>
+                        </ul>
+                        <p class="mt-4 text-gray-600 font-semibold">This work earned him the 1978 Nobel Prize in Economics.</p>
+                        <a href="https://www.youtube.com/watch?v=kOSfxk_e44M" target="_blank" class="resource-btn inline-block font-bold py-2 px-5 rounded-lg mt-6 btn">
+                            Watch: Bounded Rationality Explained
+                        </a>
+                    </div>
+                    <img src="https://placehold.co/600x400/E2E8F0/4A5568?text=Diagram+of+Decision+Making" alt="Diagram illustrating bounded rationality" class="w-full md:w-1/2 rounded-lg shadow-md object-cover">
+                </div>
+            </div>
+
+            <!-- Slide 4: AI Contributions -->
+            <div id="slide-4" class="slide flex-grow">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center">The Dawn of Thinking Machines</h2>
+                <div class="flex flex-col md:flex-row items-center gap-8">
+                    <img src="https://placehold.co/600x400/E2E8F0/4A5568?text=Early+Computer+System" alt="Early computer system" class="w-full md:w-1/2 rounded-lg shadow-md object-cover">
+                    <div class="md:w-1/2">
+                        <p class="text-gray-700 text-lg mb-4">With collaborator Allen Newell, Simon pioneered programs that simulated human thought:</p>
+                        <ul class="space-y-3 text-gray-700 list-disc list-inside">
+                            <li><b>Logic Theorist (1956):</b> The first AI program. It proved mathematical theorems, demonstrating that computers could do more than just calculate—they could reason.</li>
+                            <li><b>General Problem Solver (1957):</b> Introduced "means-ends analysis," a core AI strategy of breaking a big problem into smaller, manageable steps to close the gap between the current state and the goal.</li>
+                        </ul>
+                         <a href="https://www.youtube.com/watch?v=zJg6z1_o9pU" target="_blank" class="resource-btn inline-block font-bold py-2 px-5 rounded-lg mt-6 btn">
+                           Video: History of the Logic Theorist
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 5: Modern Influence -->
+            <div id="slide-5" class="slide flex-grow">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center">A Lasting Legacy in Modern AI</h2>
+                <div class="flex flex-col md:flex-row items-center gap-8">
+                    <div class="md:w-1/2">
+                        <p class="text-gray-700 text-lg mb-4">Simon's foundational ideas are alive in today's AI:</p>
+                        <ul class="space-y-3 text-gray-700 list-disc list-inside">
+                            <li><b>Heuristics:</b> His focus on "rules of thumb" is central to how modern AI systems efficiently search for solutions, from GPS navigation to game-playing bots.</li>
+                            <li><b>Resource Limits:</b> The concept of bounded rationality mirrors the reality of modern AI, which must make decisions with finite computing power and data.</li>
+                            <li><b>Cognitive Architecture:</b> His work linking human psychology to computation paved the way for cognitive science and the quest to build more human-like AI.</li>
+                        </ul>
+                        <a href="https://plato.stanford.edu/entries/simon/" target="_blank" class="resource-btn inline-block font-bold py-2 px-5 rounded-lg mt-6 btn">
+                            Read: Stanford Encyclopedia Entry
+                        </a>
+                    </div>
+                    <img src="https://placehold.co/600x400/E2E8F0/4A5568?text=Neural+Network+Diagram" alt="Neural network diagram" class="w-full md:w-1/2 rounded-lg shadow-md object-cover">
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Navigation -->
+        <div class="bg-gray-100 p-4 flex justify-between items-center border-t">
+            <button id="prev-btn" class="nav-btn font-bold py-2 px-5 rounded-lg btn">&larr; Previous</button>
+            <div id="slide-indicator" class="text-sm text-gray-600"></div>
+            <button id="next-btn" class="nav-btn font-bold py-2 px-5 rounded-lg btn">Next &rarr;</button>
+        </div>
+    </div>
+
+    <script>
+        // --- SCRIPT FOR SLIDE NAVIGATION ---
+        const slides = document.querySelectorAll('.slide');
+        const prevBtn = document.getElementById('prev-btn');
+        const nextBtn = document.getElementById('next-btn');
+        const slideIndicator = document.getElementById('slide-indicator');
+        
+        let currentSlide = 0;
+
+        function showSlide(index) {
+            // Hide all slides
+            slides.forEach((slide, i) => {
+                slide.classList.remove('active');
+            });
+
+            // Show the correct slide
+            slides[index].classList.add('active');
+            
+            // Update slide indicator text
+            slideIndicator.textContent = `Slide ${index + 1} of ${slides.length}`;
+
+            // Update button visibility
+            prevBtn.style.visibility = index === 0 ? 'hidden' : 'visible';
+            nextBtn.style.visibility = index === slides.length - 1 ? 'hidden' : 'visible';
+        }
+
+        nextBtn.addEventListener('click', () => {
+            if (currentSlide < slides.length - 1) {
+                currentSlide++;
+                showSlide(currentSlide);
+            }
+        });
+
+        prevBtn.addEventListener('click', () => {
+            if (currentSlide > 0) {
+                currentSlide--;
+                showSlide(currentSlide);
+            }
+        });
+
+        // Initial setup
+        showSlide(currentSlide);
+    </script>
+</body>
+</html>
