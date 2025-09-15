@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>John McCarthy: The Father of Artificial Intelligence</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        .slide {
+            display: none;
+        }
+        .slide.active {
+            display: block;
+        }
+        .button-link {
+            transition: all 0.3s ease;
+        }
+        .button-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+    </style>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen p-4">
+
+    <div class="w-full max-w-4xl bg-white rounded-2xl shadow-2xl overflow-hidden">
+        <div id="presentation-container" class="p-8 md:p-12">
+
+            <!-- Slide 1: Title -->
+            <div id="slide-1" class="slide active">
+                <div class="text-center">
+                    <img src="https://placehold.co/800x400/a7c7e7/333333?text=John+McCarthy" alt="Portrait of John McCarthy" class="mx-auto rounded-lg mb-6 w-full max-w-md object-cover">
+                    <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-2">John McCarthy</h1>
+                    <h2 class="text-2xl md:text-3xl font-semibold text-sky-600">The Father of Artificial Intelligence</h2>
+                    <p class="text-gray-600 mt-4">An interactive presentation on a true visionary 💡</p>
+                </div>
+            </div>
+
+            <!-- Slide 2: Early Life -->
+            <div id="slide-2" class="slide">
+                 <h2 class="text-3xl font-bold text-gray-800 mb-6 border-b-4 border-sky-500 pb-2">Early Life & Education</h2>
+                 <div class="grid md:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <p class="text-lg text-gray-700 mb-4">From a young age, John McCarthy was a prodigy with a deep passion for mathematics. 🧠</p>
+                        <ul class="space-y-3 list-disc list-inside text-gray-600">
+                            <li><span class="font-semibold">Self-Taught Prodigy:</span> Taught himself college-level mathematics from Caltech textbooks while still in high school.</li>
+                            <li><span class="font-semibold">Caltech Graduate:</span> Earned his B.S. in Mathematics from the California Institute of Technology in 1948.</li>
+                            <li><span class="font-semibold">Princeton Ph.D.:</span> Completed his Ph.D. in Mathematics at Princeton University in 1951, where he began exploring the concepts of machine intelligence.</li>
+                        </ul>
+                    </div>
+                    <img src="https://placehold.co/600x400/d1e7dd/333333?text=Princeton+University" alt="Princeton University Campus" class="rounded-lg shadow-md w-full h-auto object-cover">
+                 </div>
+            </div>
+
+            <!-- Slide 3: Major Contributions - Coining AI -->
+            <div id="slide-3" class="slide">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6 border-b-4 border-sky-500 pb-2">The Birth of a Field: The Dartmouth Workshop</h2>
+                <div class="bg-sky-50 p-6 rounded-lg">
+                    <p class="text-lg text-gray-700 mb-4">In 1955, McCarthy organized a landmark event that officially established and named the field of AI.</p>
+                    <ul class="space-y-3 list-disc list-inside text-gray-600 mb-6">
+                        <li><span class="font-semibold">The Proposal:</span> In his proposal for the 1956 workshop, McCarthy was the first to use the term <span class="text-sky-600 font-bold">"artificial intelligence."</span></li>
+                        <li><span class="font-semibold">The Goal:</span> To explore the idea that "every aspect of learning or any other feature of intelligence can in principle be so precisely described that a machine can be made to simulate it."</li>
+                        <li><span class="font-semibold">The Outcome:</span> This event brought together the founding fathers of AI and is recognized as the birth of the field.</li>
+                    </ul>
+                    <a href="https://www.cantorsparadise.com/the-dartmouth-workshop-the-birth-of-artificial-intelligence-57d0e8a7e380" target="_blank" class="button-link inline-block bg-sky-500 text-white font-bold py-2 px-6 rounded-lg shadow-lg">
+                        ▶️ Read About the Dartmouth Workshop
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Slide 4: Major Contributions - LISP -->
+            <div id="slide-4" class="slide">
+                 <h2 class="text-3xl font-bold text-gray-800 mb-6 border-b-4 border-sky-500 pb-2">Lisp: The Language of AI</h2>
+                 <div class="grid md:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <p class="text-lg text-gray-700 mb-4">In 1958, McCarthy created a revolutionary programming language that became the standard for AI research for decades.</p>
+                        <ul class="space-y-3 list-disc list-inside text-gray-600 mb-6">
+                            <li><span class="font-semibold">Designed for Symbols:</span> Unlike other languages focused on numbers, Lisp was designed for symbolic manipulation, perfect for representing abstract concepts.</li>
+                            <li><span class="font-semibold">Key Features:</span> It introduced groundbreaking concepts like recursion and automatic memory management (garbage collection).</li>
+                             <li><span class="font-semibold">Lasting Influence:</span> Lisp's core ideas influenced modern languages like Python, JavaScript, and Julia.</li>
+                        </ul>
+                         <a href="https://www.britannica.com/technology/LISP-computer-language" target="_blank" class="button-link inline-block bg-sky-500 text-white font-bold py-2 px-6 rounded-lg shadow-lg">
+                            Explore an overview of Lisp
+                        </a>
+                    </div>
+                    <div class="bg-gray-800 p-4 rounded-lg font-mono text-sm text-green-400 shadow-inner">
+                        <pre><code>;; Factorial function in Lisp
+(defun factorial (n)
+  (if (<= n 1)
+      1
+      (* n (factorial (- n 1)))))
+
+(factorial 5) ; returns 120
+                        </code></pre>
+                    </div>
+                 </div>
+            </div>
+
+            <!-- Slide 5: Major Contributions - Time Sharing -->
+            <div id="slide-5" class="slide">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6 border-b-4 border-sky-500 pb-2">A Revolutionary Idea: Time-Sharing</h2>
+                 <div class="grid md:grid-cols-2 gap-8 items-center">
+                    <img src="https://placehold.co/600x400/e9d5ff/333333?text=Time-Sharing+Concept" alt="Diagram of a time-sharing system" class="rounded-lg shadow-md w-full h-auto object-cover">
+                    <div>
+                        <p class="text-lg text-gray-700 mb-4">McCarthy's vision extended beyond AI to change how we interact with computers forever.</p>
+                        <ul class="space-y-3 list-disc list-inside text-gray-600 mb-6">
+                            <li><span class="font-semibold">The Problem:</span> In the 1950s, "batch processing" meant only one person could use a massive computer at a time.</li>
+                            <li><span class="font-semibold">McCarthy's Vision:</span> He proposed a system where multiple users could access a central computer simultaneously from different terminals.</li>
+                            <li><span class="font-semibold">The Impact:</span> This was the direct precursor to modern operating systems, cloud computing, and the internet itself. It made computing interactive. ☁️</li>
+                        </ul>
+                        <a href="https://www.computerhistory.org/revolution/mainframe-computers/7/163" target="_blank" class="button-link inline-block bg-sky-500 text-white font-bold py-2 px-6 rounded-lg shadow-lg">
+                            See an illustration of Time-Sharing
+                        </a>
+                    </div>
+                 </div>
+            </div>
+
+            <!-- Slide 6: Influence on Modern AI -->
+            <div id="slide-6" class="slide">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6 border-b-4 border-sky-500 pb-2">Enduring Legacy & Modern Influence</h2>
+                <p class="text-lg text-gray-700 mb-6">McCarthy's foundational work continues to shape the AI we use every day.</p>
+                <div class="grid md:grid-cols-3 gap-6 text-center">
+                    <div class="bg-sky-50 p-4 rounded-lg">
+                        <h3 class="font-bold text-sky-700 text-xl mb-2">The Framework</h3>
+                        <p class="text-gray-600">His focus on logic and symbolic reasoning laid the groundwork for knowledge-based "expert systems."</p>
+                    </div>
+                    <div class="bg-green-50 p-4 rounded-lg">
+                        <h3 class="font-bold text-green-700 text-xl mb-2">The Tools</h3>
+                        <p class="text-gray-600">The functional programming paradigm, pioneered by Lisp, is essential for the parallel computations in today's large models.</p>
+                    </div>
+                    <div class="bg-purple-50 p-4 rounded-lg">
+                        <h3 class="font-bold text-purple-700 text-xl mb-2">The Environment</h3>
+                        <p class="text-gray-600">Cloud platforms that power services like Gemini and ChatGPT are the modern evolution of his time-sharing concept.</p>
+                    </div>
+                </div>
+                 <div class="text-center mt-8">
+                    <a href="http://jmc.stanford.edu/" target="_blank" class="button-link inline-block bg-red-500 text-white font-bold py-2 px-6 rounded-lg shadow-lg">
+                       Learn More from McCarthy's Stanford Page
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Navigation -->
+        <div class="bg-gray-200 p-4 flex justify-between items-center">
+            <button id="prevBtn" class="bg-gray-500 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded-lg transition">Previous</button>
+            <div id="slide-counter" class="text-gray-700 font-semibold">Slide 1 / 6</div>
+            <button id="nextBtn" class="bg-sky-500 hover:bg-sky-600 text-white font-bold py-2 px-4 rounded-lg transition">Next</button>
+        </div>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            let currentSlide = 1;
+            const totalSlides = document.querySelectorAll('.slide').length;
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+            const slideCounter = document.getElementById('slide-counter');
+
+            function showSlide(slideNumber) {
+                document.querySelectorAll('.slide').forEach((slide, index) => {
+                    slide.classList.remove('active');
+                    if ((index + 1) === slideNumber) {
+                        slide.classList.add('active');
+                    }
+                });
+                slideCounter.textContent = `Slide ${slideNumber} / ${totalSlides}`;
+                updateNavButtons();
+            }
+
+            function updateNavButtons() {
+                prevBtn.disabled = currentSlide === 1;
+                nextBtn.disabled = currentSlide === totalSlides;
+                prevBtn.classList.toggle('opacity-50', currentSlide === 1);
+                prevBtn.classList.toggle('cursor-not-allowed', currentSlide === 1);
+                nextBtn.classList.toggle('opacity-50', currentSlide === totalSlides);
+                nextBtn.classList.toggle('cursor-not-allowed', currentSlide === totalSlides);
+            }
+
+            nextBtn.addEventListener('click', () => {
+                if (currentSlide < totalSlides) {
+                    currentSlide++;
+                    showSlide(currentSlide);
+                }
+            });
+
+            prevBtn.addEventListener('click', () => {
+                if (currentSlide > 1) {
+                    currentSlide--;
+                    showSlide(currentSlide);
+                }
+            });
+
+            // Initialize
+            showSlide(currentSlide);
+        });
+    </script>
+
+</body>
+</html>
